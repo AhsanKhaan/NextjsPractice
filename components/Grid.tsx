@@ -1,25 +1,21 @@
 import React from 'react'
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
+import { gridItems } from '@/data'
 
 
 const Grid = () => {
     return (
 
-        <section id='about'>
-            <BentoGrid>
+        <section id='about' className=''>
+            <BentoGrid  className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto">
                 {
-                    [
-                        { id: 1, title: "The Dawn of Innovation", description: "Explore the birth of groundbreaking ideas and inventions." },
-                        { id: 2, title: "The Digital Revolution", description: "Dive into the transformative power of technology." },
-                        { id: 3, title: "The Future of Innovation", description: "Discover the future of innovation and innovation." },
-                        { id: 4, title: "The Dawn of Innovation", description: "Explore the birth of groundbreaking ideas and inventions." },
-                        { id: 5, title: "The Digital Revolution", description: "Dive into the transformative power of technology." },
-                        { id: 6, title: "The Future of Innovation", description: "Discover the future of innovation and innovation." }
-                    ].map((item) => (
+                    gridItems.map((item) => (
                         <BentoGridItem
                             key={item.id}
+                            id={item.id}
                             title={item.title}
                             description={item.description}
+                            className={item.className}
                         />
                     ))}
             </BentoGrid>
