@@ -12,6 +12,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../ui/MagicButton";
+import { Grid } from "@react-three/drei";
 
 export const BentoGrid = ({
   className,
